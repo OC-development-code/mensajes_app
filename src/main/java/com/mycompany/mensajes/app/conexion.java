@@ -12,15 +12,13 @@ import java.sql.SQLException;
  *
  * @author Omar Cadiz
  */
-public class conexion {
+public class Conexion {
     
     public Connection get_connexion(){
       Connection con =null;  
       try {
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mensajes_app","root","");
-        if (con !=null) {
-               
-        }
+       
       }catch (SQLException ex) {
         System.out.println("Falla en la conexion, verificar los paquetes de coneccion de la DDBB. Puede que este desconectados los complementos de la DDBB o mal escritos los datos de coneccion");     
       }  
